@@ -20,13 +20,13 @@ import useStyles from "./postDetails-styles";
 const PostDetails = () => {
   // const tst = useSelector((state) => state.postsReducer);
   // console.log("postdetails");
-  console.log("tst");
+  // console.log("tst");
 
   const { post, posts, isLoading } = useSelector((state) => state.postsReducer);
-  console.log("postdetails");
-  console.log(post);
-  console.log(posts);
-  console.log(isLoading);
+  // console.log("postdetails");
+  // console.log(post);
+  // console.log(posts);
+  // console.log(isLoading);
 
   const dispatch = useDispatch();
   const navigate = useNavigate();
@@ -82,13 +82,10 @@ const PostDetails = () => {
           <Typography variant="body1">
             {moment(post.createdAt).fromNow()}
           </Typography>
-          <Divider style={{ margin: "20px 0" }} />
-          <Typography variant="body1">
-            <strong>Realtime Chat - coming soon!</strong>
-          </Typography>
+          {/* <Divider style={{ margin: "20px 0" }} /> */}
+          <Typography variant="body1"></Typography>
           <Divider style={{ margin: "20px 0" }} />
           <CommentSection post={post} />
-          <Divider style={{ margin: "20px 0" }} />
         </div>
         <div className={classes.imageSection}>
           <img

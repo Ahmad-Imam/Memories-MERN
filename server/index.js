@@ -21,7 +21,7 @@ const DB_URL =
 
 const PORT = process.env.PORT || 5000;
 
-console.log(process.env.DB_URL);
+// console.log(process.env.DB_URL);
 
 mongoose
   .connect(process.env.DB_URL)

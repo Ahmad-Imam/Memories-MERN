@@ -1,9 +1,9 @@
 import { actionTypes } from "../const/actionTypes";
 
 export default (state = { isLoading: true, posts: [] }, action) => {
-  console.log("post reducer called");
-  console.log(action.type);
-  console.log(state);
+  // console.log("post reducer called");
+  // console.log(action.type);
+  // console.log(state);
 
   switch (action.type) {
     case "START_LOADING":

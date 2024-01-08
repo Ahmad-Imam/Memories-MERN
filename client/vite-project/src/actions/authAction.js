@@ -8,7 +8,7 @@ export const signin = (formData, navigate) => async (dispatch) => {
 
     dispatch({ type: actionTypes.AUTH, data });
 
-    console.log("auth action signin calling dispatch signin");
+    // console.log("auth action signin calling dispatch signin");
 
     navigate("/");
   } catch (err) {
@@ -18,7 +18,7 @@ export const signin = (formData, navigate) => async (dispatch) => {
 
 export const signup = (formData, navigate) => async (dispatch) => {
   try {
-    console.log("auth action signin calling dispatch signin");
+    // console.log("auth action signin calling dispatch signin");
 
     const { data } = await api.signUp(formData);
 

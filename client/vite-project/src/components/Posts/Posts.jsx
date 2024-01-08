@@ -10,9 +10,9 @@ export default function Posts({ setCurrentId }) {
 
   const { posts, isLoading } = useSelector((state) => state.postsReducer);
 
-  console.log("oo");
-  console.log(posts);
-  console.log(isLoading);
+  // console.log("oo");
+  // console.log(posts);
+  // console.log(isLoading);
 
   if (!posts.length && !isLoading) return "No posts";
 
@@ -34,9 +34,6 @@ export default function Posts({ setCurrentId }) {
           ))}
         </Grid>
       )}
-      <h1 className={classes.mainContainer}>Posts</h1>
-      {/* <Post />
-      <Post /> */}
     </>
   );
 }

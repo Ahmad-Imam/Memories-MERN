@@ -19,7 +19,7 @@ const Navbar = () => {
   const location = useLocation();
 
   function handleLogOut() {
-    console.log("handleLogOut");
+    // console.log("handleLogOut");
     dispatch({ type: "LOGOUT" });
     setUser(null);
     // navigate("/");

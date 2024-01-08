@@ -135,7 +135,7 @@ export async function likePost(req, res) {
       new: true,
     });
 
-    console.log(updatePost);
+    // console.log(updatePost);
     res.status(201).json(updatedPost);
   } catch (err) {
     res.status(409).json({ message: err.message });
@@ -149,12 +149,12 @@ export async function commentPost(req, res) {
 
   try {
     const post = await PostMessage.findById(id);
-    console.log(post);
+    // console.log(post);
     post.comments.push(value);
     const updatedPost = await PostMessage.findByIdAndUpdate(id, post, {
       new: true,
     });
-    console.log(updatedPost);
+    // console.log(updatedPost);
     res.status(201).json(updatedPost);
   } catch (err) {
     res.status(409).json({ message: err.message });

@@ -35,9 +35,9 @@ const Home = () => {
   const [tags, setTags] = useState([]);
   const tst = useSelector((state) => state.postsReducer);
 
-  console.log("app js currentid");
-  console.log(tst);
-  console.log(currentId);
+  // console.log("app js currentid");
+  // console.log(tst);
+  // console.log(currentId);
 
   function handleSearchPost() {
     if (searchKeyword.trim() || tags) {

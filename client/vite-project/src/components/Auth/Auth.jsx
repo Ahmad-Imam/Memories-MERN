@@ -43,8 +43,8 @@ function Auth() {
 
   function handleFormSubmit(e) {
     e.preventDefault();
-    console.log("handleFormSubmit");
-    console.log(formData);
+    // console.log("handleFormSubmit");
+    // console.log(formData);
 
     if (isSignup) {
       dispatch(signup(formData, navigate));
@@ -55,10 +55,10 @@ function Auth() {
 
   function handleChange(e) {
     setFormData({ ...formData, [e.target.name]: e.target.value });
-    console.log("handleChange");
+    // console.log("handleChange");
   }
   function handleShowPassword() {
-    console.log("handleShowPassword");
+    // console.log("handleShowPassword");
     setShowPassword((prevShowPassword) => !prevShowPassword);
   }
   function switchMode() {

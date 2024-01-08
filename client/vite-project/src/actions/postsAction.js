@@ -7,8 +7,8 @@ export const getPosts = (page) => async (dispatch) => {
     dispatch({ type: actionTypes.START_LOADING });
 
     const { data } = await api.fetchPosts(page);
-    console.log("post action getposts calling dispatch fetchall");
-    console.log(data);
+    // console.log("post action getposts calling dispatch fetchall");
+    // console.log(data);
 
     dispatch({
       type: actionTypes.FETCH_ALL,
@@ -53,10 +53,10 @@ export const getPostsBySearch = (searchQuery) => async (dispatch) => {
 
 export const createPost = (post, navigate) => async (dispatch) => {
   try {
-    console.log("data");
+    // console.log("data");
     dispatch({ type: actionTypes.START_LOADING });
     const { data } = await api.createPost(post);
-    console.log(data);
+    // console.log(data);
 
     navigate(`/posts/${data._id}`);
 
@@ -70,9 +70,9 @@ export const createPost = (post, navigate) => async (dispatch) => {
 };
 export const updatePost = (id, post) => async (dispatch) => {
   try {
-    console.log("post action updateposts calling dispatch update");
+    // console.log("post action updateposts calling dispatch update");
     const { data } = await api.updatePost(id, post);
-    console.log(data);
+    // console.log(data);
     dispatch({
       type: actionTypes.UPDATE,
       payload: data,
@@ -84,7 +84,7 @@ export const updatePost = (id, post) => async (dispatch) => {
 
 export const deletePost = (id) => async (dispatch) => {
   try {
-    console.log("post action deletePosts calling dispatch delete");
+    // console.log("post action deletePosts calling dispatch delete");
     await api.deletePost(id);
 
     dispatch({
@@ -98,9 +98,9 @@ export const deletePost = (id) => async (dispatch) => {
 
 export const likePost = (id) => async (dispatch) => {
   try {
-    console.log("post action likePosts calling dispatch update");
+    // console.log("post action likePosts calling dispatch update");
     const { data } = await api.likePost(id);
-    console.log(data);
+    // console.log(data);
     dispatch({
       type: actionTypes.LIKE,
       payload: data,
@@ -112,9 +112,9 @@ export const likePost = (id) => async (dispatch) => {
 
 export const commentPost = (value, id) => async (dispatch) => {
   try {
-    console.log("post action commentPosts calling dispatch update");
+    // console.log("post action commentPosts calling dispatch update");
     const { data } = await api.comment(value, id);
-    console.log(data);
+    // console.log(data);
     dispatch({
       type: actionTypes.COMMENT,
       payload: data,

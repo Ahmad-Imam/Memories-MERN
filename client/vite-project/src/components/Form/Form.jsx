@@ -28,13 +28,13 @@ export default function Form({ currentId, setCurrentId }) {
   );
   // console.log("form " + post);
   useEffect(() => {
-    console.log("form use effect [post]");
+    // console.log("form use effect [post]");
     if (post) setPostData(post);
   }, [post]);
 
   async function handleSubmit(e) {
     e.preventDefault();
-    console.log(postData);
+    // console.log(postData);
     if (currentId === 0) {
       dispatch(createPost({ ...postData, name: user?.result?.name }, navigate));
 
@@ -47,8 +47,8 @@ export default function Form({ currentId, setCurrentId }) {
     }
   }
 
-  console.log("user?.result?.name");
-  console.log(user?.result?.name);
+  // console.log("user?.result?.name");
+  // console.log(user?.result?.name);
   if (!user?.result?.name) {
     return (
       <Paper className={classes.paper}>
