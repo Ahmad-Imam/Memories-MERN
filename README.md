@@ -1,6 +1,6 @@
 # Memory-MERN
 
-A social media application developed using MERN (MongoDB, Express, React, NodeJS) stack. It uses React in the front end, and Node and Mongoose as DB in the backend.
+A social media application developed using MERN (MongoDB, Express, React, NodeJS) stack. It uses React, Material UI in the front end, and Node and Mongoose as DB in the backend.
 
 Instruction:
 
